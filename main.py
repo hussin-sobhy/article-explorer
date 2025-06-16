@@ -39,8 +39,9 @@ if process_url_clicked:
     if not valid_urls:
         st.warning("Please enter at least one URL to process.")
     else:
-        #use unstructured loader to load the data from the URLs
         # Pass only the valid ones to Unstructured
+
+        #use unstructured loader to load the data from the URLs
         #loader = UnstructuredURLLoader(urls=valid_urls)
         #main_placeholder.text("Data Loading...Started...✅✅✅")
         #data = loader.load()
