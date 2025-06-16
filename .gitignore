@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.env/
+venv/
+env/
+*.egg-info/
+dist/
+
+# VSCode settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/
+
+# FAISS index
+#faiss_store_openai.pkl
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+
+# dotenv
+.env
