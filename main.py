@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 import streamlit as st
 import pickle
-from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import UnstructuredURLLoader
@@ -17,7 +16,7 @@ from langchain.schema import Document
 
 load_dotenv()
 
-st.title("RockyBot: News Research Tool 📈")
+st.title("News Research Tool 📈")
 st.sidebar.title("News Article URLs")
 
 urls = []
@@ -30,7 +29,7 @@ file_path = "faiss_store_openai.pkl"
 
 
 main_placeholder = st.empty()
-llm = ChatGroq(model_name="meta-llama/llama-4-maverick-17b-128e-instruct")
+llm = ChatGroq(model="meta-llama/llama-4-maverick-17b-128e-instruct")
 
 
 if process_url_clicked:
@@ -42,6 +41,7 @@ if process_url_clicked:
         # Pass only the valid ones to Unstructured
 
         #use unstructured loader to load the data from the URLs
+
         #loader = UnstructuredURLLoader(urls=valid_urls)
         #main_placeholder.text("Data Loading...Started...✅✅✅")
         #data = loader.load()
@@ -54,7 +54,7 @@ if process_url_clicked:
         for url in valid_urls:
             # for a single-page scrape
             res = app.scrape_url(url, formats=["markdown", "html"])
-            text = res.markdown or res.get("markdown", "")
+            text = getattr(res, "markdown", "") or ""
 
             data.append(Document(page_content= text, metadata= {"source": url}))
 
