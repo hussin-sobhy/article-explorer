@@ -11,7 +11,7 @@ from langchain.document_loaders import UnstructuredURLLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 
-from firecrawl import FirecrawlApp, ScrapeOptions
+from firecrawl import FirecrawlApp
 from langchain.schema import Document
 
 load_dotenv()
