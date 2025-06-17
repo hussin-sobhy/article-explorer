@@ -9,7 +9,7 @@ from langchain.chains import RetrievalQAWithSourcesChain
 from langchain_groq import ChatGroq
 from firecrawl import FirecrawlApp
 
-class NewsResearchProcessor:
+class ArticleExplorerProcessor:
     def __init__(self, file_path: str = "faiss_store_openai.pkl"):
         self.file_path = file_path
         self.llm = ChatGroq(

@@ -1,39 +1,78 @@
-# News Research Tool 📈
+# ArticleExplorer
 
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.24.0-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-yellow.svg?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co)
+[![FAISS](https://img.shields.io/badge/FAISS-lightblue.svg?style=for-the-badge&logo=meta&logoColor=white)](https://github.com/facebookresearch/faiss)
+[![LangChain](https://img.shields.io/badge/LangChain-121D33.svg?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-An intelligent news research assistant powered by LangChain and Streamlit. Process multiple news articles and ask questions to get insights using advanced language models.
+An intelligent article exploration assistant powered by LangChain, Hugging Face, and FAISS. Process any articles and ask questions to get insights using state-of-the-art language models and vector search technology.
 
 ## 🌟 Features
 
-- 📰 Process multiple news articles simultaneously
-- 🔍 Extract and analyze content using FirecrawlApp
-- 💡 Ask questions about the processed articles
+- 📰 Process multiple articles simultaneously
+- 🧠 Advanced text embeddings using Hugging Face's `all-mpnet-base-v2`
+- � Efficient vector search with Facebook AI's FAISS
+- 🔗 Robust Q&A pipeline built with LangChain
 - 🎯 Get precise answers with source citations
 - 🚀 Modern, responsive UI with Streamlit
-- 📊 Progress tracking and status updates
+- 📊 Real-time progress tracking
 - 🎨 Clean, minimal design
 
-## 📸 Demo & Screenshots
+## 🔄 Workflow
 
-Here's how the application looks and works:
+Here's how ArticleExplorer processes and analyzes articles:
 
-### Main Dashboard
-![Dashboard](./images/dashboard.png)
-*The main interface where you can input article URLs and start processing*
+![ArticleExplorer Workflow](./images/workflow.png)
 
-### Query Results
-![Query Result](./images/video_git.gif)
-*Example of a query result with answer and sources*
+## 🧪 Technical Stack
+
+### Core Technologies
+- **Vector Search**: [FAISS (Facebook AI Similarity Search)](https://github.com/facebookresearch/faiss)
+  - Efficient similarity search and clustering of dense vectors
+  - Optimized for fast retrieval of relevant article segments
+
+- **Text Embeddings**: [Hugging Face Sentence Transformers](https://huggingface.co/sentence-transformers)
+  - Model: `sentence-transformers/all-mpnet-base-v2`
+  - State-of-the-art text embeddings for semantic search
+  - Optimized for article similarity and retrieval
+
+- **LangChain Integration**:
+  - `RetrievalQAWithSourcesChain` for structured Q&A
+  - Document loading and text splitting
+  - Vector store management and retrieval
+  - LLM chain orchestration
+
+### Processing Pipeline
+1. Article Processing:
+   - Text extraction and cleaning
+   - Chunking with `RecursiveCharacterTextSplitter`
+   - Embedding generation with Sentence Transformers
+
+2. Vector Search:
+   - FAISS indexing for fast similarity search
+   - Efficient storage and retrieval of article embeddings
+   - Source tracking for answer attribution
+
+3. Question Answering:
+   - Semantic search using FAISS
+   - Context retrieval and aggregation
+   - LLM-powered answer generation with sources
+
+## 🎥 Demo
+
+Watch ArticleExplorer in action:
+
+![ArticleExplorer Demo](./images/video_gif.gif)
+*A quick demo showing article processing and Q&A capabilities*
 
 ## 🔧 Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/hussinxx700/news_research_tool
-cd news_research_tool
+git clone https://github.com/hussinxx700/article-explorer
+cd article-explorer
 ```
 
 2. Set up your environment:
@@ -41,8 +80,8 @@ cd news_research_tool
    **Option A: Using Conda (Recommended)**
    ```bash
    # Create and activate conda environment
-   conda create -n news-research python=3.10
-   conda activate news-research
+   conda create -n article-explorer python=3.10
+   conda activate article-explorer
 
    # Install dependencies
    pip install -r requirements.txt
@@ -83,7 +122,7 @@ GROQ_API_KEY=your_groq_api_key_here
 streamlit run main.py
 ```
 
-2. Enter up to 3 news article URLs in the sidebar.
+2. Enter up to 3 article URLs in the sidebar.
 
 3. Click "Process URLs" to analyze the articles.
 
@@ -99,15 +138,14 @@ The project is organized into three main modules:
 
 ### Project Structure
 ```
-news_research_tool/
+article-explorer/
 ├── main.py
 ├── processing.py
 ├── ui.py
 ├── requirements.txt
 ├── .env
 ├── images/
-│   ├── dashboard.png
-│   └── query_result.png
+│   └── video_gif.gif
 └── README.md
 ```
 
