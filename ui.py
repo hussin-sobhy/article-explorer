@@ -4,7 +4,7 @@ from typing import List, Tuple, Optional, Callable
 def setup_page():
     """Configure the basic page settings"""
     st.set_page_config(
-        page_title="News Research",
+        page_title="ArticleExplorer",
         page_icon="📈",
         layout="wide",
         initial_sidebar_state="expanded"
@@ -45,13 +45,13 @@ def setup_page():
 
 def render_header():
     """Render the page header"""
-    st.title("News Research Tool 📈")
+    st.title("ArticleExplorer: Ask Anything from Articles 📈")
 
 def get_urls() -> Tuple[List[str], bool]:
     """Get URLs from sidebar and return them along with button state"""
     with st.sidebar:
-        st.markdown("### 📰 News Article URLs")
-        st.markdown("Enter up to 3 article URLs for analysis")
+        st.markdown("### 📰 Article URLs")
+        st.markdown("Enter up to 3 URLs for analysis")
         
         urls = []
         for i in range(3):

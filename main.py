@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import streamlit as st
 
-from processing import NewsResearchProcessor
+from processing import ArticleExplorerProcessor
 import ui
 
 # Load environment variables
@@ -10,7 +10,7 @@ load_dotenv()
 
 # Initialize session state
 if 'processor' not in st.session_state:
-    st.session_state['processor'] = NewsResearchProcessor()
+    st.session_state['processor'] = ArticleExplorerProcessor()
 
 def main():
     # Setup the page
