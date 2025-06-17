@@ -5,6 +5,7 @@
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-yellow.svg?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co)
 [![FAISS](https://img.shields.io/badge/FAISS-lightblue.svg?style=for-the-badge&logo=meta&logoColor=white)](https://github.com/facebookresearch/faiss)
 [![LangChain](https://img.shields.io/badge/LangChain-121D33.svg?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com)
+[![Firecrawel](https://img.shields.io/badge/Firecrawel-orange.svg?style=for-the-badge)](https://firecrawel.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 An intelligent article exploration assistant powered by LangChain, Hugging Face, and FAISS. Process any articles and ask questions to get insights using state-of-the-art language models and vector search technology.
@@ -29,6 +30,11 @@ Here's how ArticleExplorer processes and analyzes articles:
 ## 🧪 Technical Stack
 
 ### Core Technologies
+- **Web Scraping**: [Firecrawel](https://firecrawel.com)
+  - Advanced web scraping and content extraction
+  - Efficient handling of dynamic web content
+  - Clean article extraction capabilities
+
 - **Vector Search**: [FAISS (Facebook AI Similarity Search)](https://github.com/facebookresearch/faiss)
   - Efficient similarity search and clustering of dense vectors
   - Optimized for fast retrieval of relevant article segments
