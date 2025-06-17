@@ -21,11 +21,11 @@ An intelligent news research assistant powered by LangChain and Streamlit. Proce
 Here's how the application looks and works:
 
 ### Main Dashboard
-![Dashboard](./images/home.png)
+![Dashboard](./images/dashboard.png)
 *The main interface where you can input article URLs and start processing*
 
 ### Query Results
-![Query Result](./images/final_answer.png)
+![Query Result](./images/query_result.png)
 *Example of a query result with answer and sources*
 
 ## 🔧 Installation
@@ -36,15 +36,31 @@ git clone https://github.com/hussinxx700/news_research_tool
 cd news_research_tool
 ```
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-```
+2. Set up your environment:
 
-3. Install dependencies:
+   **Option A: Using Conda (Recommended)**
+   ```bash
+   # Create and activate conda environment
+   conda create -n news-research python=3.10
+   conda activate news-research
+
+   # Install dependencies
+   pip install -r requirements.txt
+   ```
+
+   **Option B: Using Python venv**
+   ```bash
+   # Create and activate virtual environment
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+   # Install dependencies
+   pip install -r requirements.txt
+   ```
+
+3. Verify Installation:
 ```bash
-pip install -r requirements.txt
+python -c "import streamlit; import langchain; print('Setup successful!')"
 ```
 
 ## ⚙️ Configuration
@@ -57,6 +73,7 @@ touch .env
 2. Add your API keys to the `.env` file:
 ```env
 FIRECRAWL_API_KEY=your_firecrawl_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
 ## 🚀 Usage
