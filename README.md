@@ -25,7 +25,7 @@ Here's how the application looks and works:
 *The main interface where you can input article URLs and start processing*
 
 ### Query Results
-![Query Result](./images/query_result.png)
+![Query Result](./images/video_git.gif)
 *Example of a query result with answer and sources*
 
 ## 🔧 Installation

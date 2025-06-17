@@ -36,5 +36,8 @@ Thumbs.db
 
 # dotenv
 .env
-faiss_store_openai.pkl
+
+# Python pickle files
 *.pkl
+
+*.identifi
