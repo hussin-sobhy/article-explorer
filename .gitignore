@@ -37,3 +37,4 @@ Thumbs.db
 # dotenv
 .env
 faiss_store_openai.pkl
+*.pkl
