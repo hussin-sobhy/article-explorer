@@ -4,7 +4,7 @@ from typing import List, Tuple, Optional, Callable
 def setup_page():
     """Configure the basic page settings"""
     st.set_page_config(
-        page_title="RockyBot: News Research",
+        page_title="News Research",
         page_icon="📈",
         layout="wide",
         initial_sidebar_state="expanded"
