@@ -25,7 +25,7 @@ An intelligent article exploration assistant powered by LangChain, Hugging Face,
 
 Here's how ArticleExplorer processes and analyzes articles:
 
-![ArticleExplorer Workflow](./images/workflow.png)
+![ArticleExplorer Workflow](./media/workflow.png)
 
 ## 🧪 Technical Stack
 
@@ -70,7 +70,7 @@ Here's how ArticleExplorer processes and analyzes articles:
 
 Watch ArticleExplorer in action:
 
-![ArticleExplorer Demo](./images/video_gif.gif)
+![ArticleExplorer Demo](./media/video_gif.gif)
 *A quick demo showing article processing and Q&A capabilities*
 
 ## 🔧 Installation
