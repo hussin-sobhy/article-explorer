@@ -77,7 +77,7 @@ Watch ArticleExplorer in action:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/hussinxx700/article-explorer
+git clone https://github.com/hussin-sobhy/article-explorer
 cd article-explorer
 ```
 
