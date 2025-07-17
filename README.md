@@ -1,12 +1,13 @@
 # ArticleExplorer
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.24.0-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-yellow.svg?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co)
-[![FAISS](https://img.shields.io/badge/FAISS-lightblue.svg?style=for-the-badge&logo=meta&logoColor=white)](https://github.com/facebookresearch/faiss)
-[![LangChain](https://img.shields.io/badge/LangChain-121D33.svg?style=for-the-badge&logo=chainlink&logoColor=white)](https://langchain.com)
-[![Firecrawel](https://img.shields.io/badge/Firecrawel-orange.svg?style=for-the-badge)](https://firecrawel.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-3100/)
+[![LangChain](https://img.shields.io/badge/LangChain-0052CC?logo=langchain&logoColor=white)](https://python.langchain.com/)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21F?logo=huggingface&logoColor=black)](https://huggingface.co/)
+[![FAISS](https://img.shields.io/badge/FAISS-lightblue?logo=meta&logoColor=white)](https://github.com/facebookresearch/faiss)
+[![Firecrawel](https://img.shields.io/badge/Firecrawel-orange)](https://firecrawel.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
 
 An intelligent article exploration assistant powered by LangChain, Hugging Face, and FAISS. Process any articles and ask questions to get insights using state-of-the-art language models and vector search technology.
 
