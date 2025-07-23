@@ -25,9 +25,6 @@ dist/
 # Streamlit
 .streamlit/
 
-# FAISS index
-#faiss_store_openai.pkl
-
 # Logs
 *.log
 
