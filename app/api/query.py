@@ -5,7 +5,7 @@ from app.models.query import Citation, QueryRequest, QueryResponse
 router= APIRouter(prefix= "/v1", tags=["query"])
 
 @router.post("/query", response_model= QueryResponse)
-def query(request: QueryRequest) -> QueryResponse:
+async def query(request: QueryRequest) -> QueryResponse:
     # pass
 
     return QueryResponse(
