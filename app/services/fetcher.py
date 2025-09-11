@@ -1,5 +1,4 @@
 from typing import List
-import firecrawl
 from langchain.schema import Document
 from firecrawl import FirecrawlApp
 from app.config import settings

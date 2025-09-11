@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    qdrant_url: str = "http://localhost:6333"
+    Qdrant_url: str = "http://localhost:6333"
     GROQ_API_KEY: str
     FIRECRAWL_API_KEY: str
 
