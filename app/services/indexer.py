@@ -32,14 +32,8 @@ class IndexerService:
 
 
     def _point_id(self, chunk: Document) -> str:
-        """Convert the hex chunk_id to a proper UUID format for Qdrant"""
-
-        hex_id = chunk.metadata["chunk_id"]
-        # Pad to 32 characters if needed and format as UUID
-        padded_hex = hex_id.ljust(32, '0')
-        # Format as UUID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-        formatted_uuid = f"{padded_hex[:8]}-{padded_hex[8:12]}-{padded_hex[12:16]}-{padded_hex[16:20]}-{padded_hex[20:32]}"
-        return formatted_uuid
+        """Use the chunk_id directly as it's already in UUID format"""
+        return chunk.metadata["chunk_id"]
 
     
     def upsert(self, chunks: List[Document]) -> int:

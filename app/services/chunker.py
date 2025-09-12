@@ -3,6 +3,7 @@ from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import re
 import hashlib
+import uuid
 import logging
 
 logger = logging.getLogger(__name__)
@@ -38,11 +39,12 @@ class ChunkerService:
 
     def _chunk_id(self, source: str, start: int, end: int, idx: int) -> str:
         """
-        Stable id derived from source + span. Keeps the same value across re-runs
-        as long as upstream text & splitter params don’t change.
+        Generate a deterministic UUID5 from source + span.
+        Keeps the same value across re-runs as long as upstream text & splitter params don't change.
         """
-        h = hashlib.md5(f"{source}|{start}|{end}|{idx}".encode("utf-8")).hexdigest()[:12]
-        return f"{h}"
+        namespace = uuid.NAMESPACE_DNS
+        name = f"{source}|{start}|{end}|{idx}"
+        return str(uuid.uuid5(namespace, name))
 
 
     def split(self, docs: List[Document]) -> List[Document]:
